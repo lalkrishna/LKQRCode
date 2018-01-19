@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="QRTestApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QR Code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpx-Jv-Cgw">
+                                <rect key="frame" x="100" y="41" width="175" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="175" id="BKI-O4-r3r"/>
+                                    <constraint firstAttribute="height" constant="34" id="SxX-sL-NUO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XlQ-5O-oMp">
+                                <rect key="frame" x="121" y="93" width="132" height="30"/>
+                                <color key="backgroundColor" red="0.086274509799999996" green="0.49803921569999998" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="0ai-a4-Udr"/>
+                                    <constraint firstAttribute="width" constant="132" id="udi-YW-AgP"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Scanner"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="scannerButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ku5-ha-KBe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ecI-HS-ORg">
+                                <rect key="frame" x="259" y="152" width="100" height="30"/>
+                                <color key="backgroundColor" red="0.086274509799999996" green="0.49803921569999998" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="4dR-WB-ALL"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Generate"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="generateButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hy2-m7-0hL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="49U-8D-sBu">
+                                <rect key="frame" x="16" y="200" width="167.5" height="30"/>
+                                <color key="backgroundColor" red="0.086274509799999996" green="0.49803921569999998" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Generate Contact QR"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="generateContactQR:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VJs-ul-7dI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qij-KU-NLN">
+                                <rect key="frame" x="191.5" y="200" width="167.5" height="30"/>
+                                <color key="backgroundColor" red="0.086274509799999996" green="0.49803921569999998" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Generate Wi-Fi QR"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="generateWifiQR:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gYU-8f-7R0"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="text/URL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KCw-ka-ghW">
+                                <rect key="frame" x="16" y="153" width="235" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TBz-z2-nfa">
+                                <rect key="frame" x="21" y="265" width="333" height="333"/>
+                                <color key="backgroundColor" red="0.74509803919999995" green="0.74901960779999999" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="TBz-z2-nfa" secondAttribute="height" multiplier="1:1" id="3I4-CP-0eU"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qij-KU-NLN" firstAttribute="top" secondItem="KCw-ka-ghW" secondAttribute="bottom" constant="17" id="29X-tX-ixv"/>
+                            <constraint firstItem="qij-KU-NLN" firstAttribute="width" secondItem="49U-8D-sBu" secondAttribute="width" id="3qv-0K-Pck"/>
+                            <constraint firstItem="XlQ-5O-oMp" firstAttribute="top" secondItem="fpx-Jv-Cgw" secondAttribute="bottom" constant="18" id="7tA-da-yqt"/>
+                            <constraint firstItem="XlQ-5O-oMp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="E1a-CT-fLc"/>
+                            <constraint firstItem="fpx-Jv-Cgw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="21" id="Er7-zM-VdW"/>
+                            <constraint firstItem="KCw-ka-ghW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="H4I-Qb-crv"/>
+                            <constraint firstItem="KCw-ka-ghW" firstAttribute="top" secondItem="XlQ-5O-oMp" secondAttribute="bottom" constant="30" id="Imu-Ey-smn"/>
+                            <constraint firstItem="ecI-HS-ORg" firstAttribute="top" secondItem="XlQ-5O-oMp" secondAttribute="bottom" constant="29" id="Jfd-LT-cky"/>
+                            <constraint firstItem="ecI-HS-ORg" firstAttribute="leading" secondItem="KCw-ka-ghW" secondAttribute="trailing" constant="8" id="bgT-9C-d0S"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qij-KU-NLN" secondAttribute="trailing" constant="16" id="d8X-4b-VAz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TBz-z2-nfa" secondAttribute="trailing" constant="21" id="fVq-LZ-czj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ecI-HS-ORg" secondAttribute="trailing" constant="16" id="k6a-R7-jmU"/>
+                            <constraint firstItem="TBz-z2-nfa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="21" id="lNL-ii-Xsw"/>
+                            <constraint firstItem="49U-8D-sBu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="oRr-qT-6r5"/>
+                            <constraint firstItem="TBz-z2-nfa" firstAttribute="top" secondItem="49U-8D-sBu" secondAttribute="bottom" constant="35" id="qKJ-JV-xXM"/>
+                            <constraint firstItem="qij-KU-NLN" firstAttribute="leading" secondItem="49U-8D-sBu" secondAttribute="trailing" constant="8" id="r4g-Bh-0Bq"/>
+                            <constraint firstItem="fpx-Jv-Cgw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rJW-13-mpN"/>
+                            <constraint firstItem="49U-8D-sBu" firstAttribute="top" secondItem="KCw-ka-ghW" secondAttribute="bottom" constant="17" id="s3h-8U-iVl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="TBz-z2-nfa" id="xcs-mc-PrK"/>
+                        <outlet property="textField" destination="KCw-ka-ghW" id="BwG-OC-GvB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="118.29085457271366"/>
+        </scene>
+    </scenes>
+</document>

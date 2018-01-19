@@ -1,0 +1,11 @@
+framework module LKQRCode {
+  umbrella header "LKQRCode.h"
+
+  export *
+  module * { export * }
+}
+
+module LKQRCode.Swift {
+    header "LKQRCode-Swift.h"
+    requires objc
+}
