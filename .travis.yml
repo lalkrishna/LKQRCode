@@ -1,6 +1,6 @@
 language: objective-c
 osx_image: xcode9
 script:
-  - xcodebuild -project LKQRCode.xcodeproj -target SLKQRCode -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 7,OS=11'
+  - xcodebuild -project LKQRCode.xcodeproj -target LKQRCode -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 7,OS=11'
   - xcodebuild -project QRTestApp.xcodeproj -target QRTestApp -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 7,OS=11'
 after_success:
