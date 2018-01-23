@@ -1,6 +1,5 @@
 language: objective-c
-osx_image: xcode9
+osx_image: xcode9.2
 script:
-  - xcodebuild -project LKQRCode.xcodeproj -target LKQRCode -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 7,OS=11'
-  - xcodebuild -project QRTestApp.xcodeproj -target QRTestApp -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 7,OS=11'
+  - xcodebuild clean test -project /LKQRCode/LKQRCode.xcodeproj -scheme LKQRCode -destination "platform=iOS Simulator,name=iPhone 7,OS=10.3" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO -quiet
 after_success:
